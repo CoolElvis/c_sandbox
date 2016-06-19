@@ -52,19 +52,6 @@ int GetCrc16(const char *pData, int nLength) {
 }
 
 
-void write_file() {
-    char data[] = "\x78\x78\x0D\x01\x03\x53\x41\x35\x32\x15\x03\x62\x00\x02\x2D\x06\x0D\x0A";
-//    0x8C
-//    0xDD
-
-    fstream file;
-    file.open("/home/coolelvis/work/sandbox/data.bin", ios::binary | ios::out);
-    file.write(data, sizeof(data) );
-    file.close();
-
-    cout << "write_file: Size of data:" << sizeof data << endl;
-}
-
 int main() {
 
 //    char data[] = "\x05\x01\x00\x02";
