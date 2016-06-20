@@ -3,5 +3,12 @@ project(sandbox)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp)
-add_executable(sandbox ${SOURCE_FILES})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/lib")
+
+set(SOURCE_FILES crc_16.cpp)
+#add_executable(sandbox ${SOURCE_FILES})
+
+set(SOURCE_LIB crc_16.cpp)
+
+add_library(crc_16 SHARED ${SOURCE_LIB})
