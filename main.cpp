@@ -1,11 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <chrono>
+#include "crc_16.cpp"
 
 using namespace std;
-
-
-
 
 int main() {
 
@@ -18,7 +16,7 @@ int main() {
             system_clock::now().time_since_epoch()
     );
 
-    for (int a = 0; a < 1000000; a = a + 1) {
+    for (int a = 0; a < 3000000; a = a + 1) {
 //        char data[] = {0x05, 0x01, 0x00, 0x02,  rand() % 100};
         char data[] = {0x05, 0x01, 0x00, 0x02};
 
